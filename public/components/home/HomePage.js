@@ -7,11 +7,32 @@
 import React from 'react';
 
 class HomePage extends  React.Component {
+    constructor(props,context){
+        super(props,context);
+
+        this.state = {
+            tweet: {message:''},
+            tweets: []
+
+        }
+
+    }
+
+    onPostTweet(event){
+         alert(`Saving tweet' + ${this.state.tweet.message}`)
+    }
+     onMessageChange(event){
+        const tweetToPost = this.state.tweet;
+        tweetToPost.message = event.target.value;
+        this.setState({tweet:tweetToPost});
+     }
 
     render(){
         return (
             <div className="container-fluid">
-                <p>Home Page Component</p>
+                <h1>Twitter Home Page Component</h1>
+                <input type="text" onChange={this.onMessageChange.bind(this)} value={this.state.tweet.message} />
+                <input type="submit" value="Post tweet" onClick={this.onPostTweet.bind(this)}/>
             </div>
         );
     }

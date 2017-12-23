@@ -7,7 +7,9 @@ class AboutPage extends React.Component {
 
     render(){
         return (
-          <div>About Page Component</div>
+            <div><h1>About Page Component</h1></div>
         );
     }
 }
+
+export default AboutPage;
