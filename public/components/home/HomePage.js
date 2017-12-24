@@ -31,8 +31,8 @@ class HomePage extends  React.Component {
         return (
             <div className="container-fluid">
                 <h1>Twitter Home Page Component</h1>
-                <input type="text" onChange={this.onMessageChange.bind(this)} value={this.state.tweet.message} />
-                <input type="submit" value="Post tweet" onClick={this.onPostTweet.bind(this)}/>
+                <input className="input" type="text" onChange={this.onMessageChange.bind(this)} value={this.state.tweet.message} />
+                <input className="button" type="submit" value="Post tweet" onClick={this.onPostTweet.bind(this)}/>
             </div>
         );
     }

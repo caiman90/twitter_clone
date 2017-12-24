@@ -4,12 +4,10 @@ h1{
     border: 2px;
   }
   background-color: transparent;
-  color: aquamarine;
+  color: #3CBC8D;
 }
 body {
- // background:url("../assets/Twitter-Logo-Evolution.jpg");
-  overflow: hidden;
-  min-height: 100px;
+
 }
 ul {
   list-style-type: none;
@@ -28,7 +26,7 @@ li a {
 
 /* Change the link color on hover */
 li a:hover {
-  background-color: #555;
+  background-color: #3CBC8D;
   color: white;
 }
 .active {
@@ -38,8 +36,49 @@ li a:hover {
   width:100%;
   display:flex;
   background-color: lightblue;
+  border-radius: 25px 50px;
+
 }
+.container-fluid{
+  //background:url("../assets/Twitter-Logo-Evolution.jpg");
+  overflow: hidden;
+  }
 .nav li {
     margin-left: 4%;  /* Magic! */
+}
+.button {
+  border: 1px solid darkcyan;
+  padding:10px;
+  background-color: lightblue;
+  font-weight: bold;
+  font-size: 12px;
+  margin-left:20px;
+  border-radius: 25px;
 
+}
+.button:active {
+  border-radius: 25px;
+  background-color:#3CBC8D;
+  outline:none;
+}
+.input {
+  padding: 10px;
+  background-color: lightblue;
+  border:none;
+  margin-left: 20px;
+  border-radius: 25px;
+
+}
+.input:focus{
+  outline: none;
+  background-color:#3CBC8D ;
+
+}
+.label {
+  font-family: "Arial";
+  font-size: 13px;
+  color: #3CBC8D;
+}
+.form-containter {
+  padding:10px;
 }
