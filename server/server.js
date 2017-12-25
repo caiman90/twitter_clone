@@ -5,9 +5,13 @@ var app = require("express")();
 var cors = require("cors");
 var bodyParser = require("body-parser");
 
-// parsing our requests
 app.use(cors());
 app.use(bodyParser.json());
+
+// **** Starting db *****
+require('./models/DB')();
+// **** REST API for TWEETS *****
+require('./routes/tweetRoutes')(app);
 
 app.listen(3000,function () {
    console.log("###########################");

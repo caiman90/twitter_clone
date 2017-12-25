@@ -6,5 +6,4 @@ import { render } from 'react-dom';
 import App from './components/App';
 import scss from './styles/style.scss'
 
-
 render(<App/> ,document.getElementById('root'));
