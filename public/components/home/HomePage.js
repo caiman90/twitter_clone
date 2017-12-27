@@ -12,7 +12,6 @@ import PostTweet from './PostTweet';
 class HomePage extends  React.Component {
     constructor(props,context){
         super(props,context);
-        debugger
         this.state = {
             tweet: {message:''},
         }

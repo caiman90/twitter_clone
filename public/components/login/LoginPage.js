@@ -21,7 +21,7 @@ class LoginPage extends React.Component {
                     <label className="label">Username</label>
                     <input className="input" type="text" />
                 </div>
-                <div className="form-containter ">
+                <div className="form-containter">
                     <label className="label">Password</label>
                     <input className="input" type="text" />
                 </div>

@@ -5,9 +5,11 @@ const TweetListRow = ({tweet})=>{
 
     return(
         <tr>
+            <td> <img  className="img" src="/public/assets/reha.jpg" alt="Profile Pic" /></td>
             <td>{tweet.message}</td>
             <td>{tweet.date}</td>
-            <td>{tweet.author}</td>
+            <td>{tweet.author} </td>
+
         </tr>
     );
 };

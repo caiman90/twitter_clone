@@ -7,7 +7,6 @@ module.exports = (app) => {
         request.date = '22/07/2007'; // hard wire user for now
         request.time = '22:51';
         var tweet = new Tweet(request);
-        console.log("User tweet stari:"+ JSON.stringify(tweet));
         tweet.save((err,result)=>{
             if(err){
                 console.error('Error saving tweet : ' + err);
@@ -21,6 +20,7 @@ module.exports = (app) => {
         var tweets = await Tweet.find({});
         res.status(200).send(tweets);
     })
+
 
 }
 
