@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PostTweetCont = ({props})=>{
+const PostTweet = ({props})=>{
     return(
-        <div className="container-fluid">
+        <div className="tweet-component">
             <img  className="img" src="/public/assets/reha.jpg" alt="Profile Pic" />
             <textarea className="input" type="text" onChange={props.onMessageChange} value={props.state.tweet.message} />
             <input className="button" type="submit" value="Post tweet" onClick={props.postTweet}/>
@@ -11,7 +11,7 @@ const PostTweetCont = ({props})=>{
     );
 };
 
-PostTweetCont.propTypes = {
+PostTweet.propTypes = {
     props: PropTypes.object.isRequired
 }
-export default PostTweetCont;
+export default PostTweet;

@@ -1,11 +1,17 @@
 import React from 'react'
-import {withRouter} from 'react-router-dom'
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as loginActions from '../../actions/loginActions';
+import LoginForm from './LoginForm';
 
 class LoginPage extends React.Component {
     constructor(state,props){
         super(state,props);
         this.state = {
-
+          user: {
+              username:'',
+              password:''
+          }
         }
     }
     login(){
@@ -14,21 +20,20 @@ class LoginPage extends React.Component {
 
 
     render(){
-        return(
-            <div className="container-fluid">
-                <h1>Please Log in to continue....</h1>
-                <div className="form-containter">
-                    <label className="label">Username</label>
-                    <input className="input" type="text" />
-                </div>
-                <div className="form-containter">
-                    <label className="label">Password</label>
-                    <input className="input" type="text" />
-                </div>
-                <input className="button" type="submit" value="Log in" onClick={this.login}/>
-            </div>
-        )
+        return (
+        <LoginForm props={this.state}/>
+        );
     }
 
 }
-export default withRouter(LoginPage)
+function mapStateToProps(state){
+    return {
+        tweets : state.tweets
+    };
+}
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(loginActions,dispatch)
+    };
+}
+export default connect(mapStateToProps,mapDispatchToProps)(LoginPage)
