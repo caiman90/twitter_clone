@@ -9,10 +9,8 @@ import AboutPage from './about/AboutPage'
 import LoginPage from './login/LoginPage'
 import configureStore from '../store/configureStore';
 import {Provider} from 'react-redux';
-import {loadTweets} from "../actions/tweetActions";
 
 const store = configureStore();
-store.dispatch(loadTweets());
 
 class App extends  React.Component {
     render(){

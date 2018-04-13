@@ -17,6 +17,7 @@ class HomePage extends  React.Component {
         }
         this.postTweet = this.postTweet.bind(this);
         this.onMessageChange = this.onMessageChange.bind(this);
+        this.props.actions.loadTweets();
     }
 
      tweetRow(tweet,index){
